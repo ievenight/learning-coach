@@ -32,9 +32,16 @@ operational, not a lecture on the science.
 
 ## Install
 
+Via the [skills.sh](https://skills.sh) CLI (recommended):
+
 ```bash
-# Claude Code (personal skills)
-cp -r skill/learning-coach ~/.claude/skills/learning-coach
+npx skills add ievenight/learning-coach
+```
+
+Or copy it into your agent's skills directory manually:
+
+```bash
+cp -r skills/learning-coach ~/.claude/skills/learning-coach
 ```
 
 Then just express a learning intent — "teach me X", "help me get my head around Y",
@@ -71,9 +78,16 @@ personal data.
 
 ## 安装
 
+用 [skills.sh](https://skills.sh) 的 CLI（推荐）：
+
 ```bash
-# Claude Code（个人 skills）
-cp -r skill/learning-coach ~/.claude/skills/learning-coach
+npx skills add ievenight/learning-coach
+```
+
+或手动复制到 Agent 的 skills 目录：
+
+```bash
+cp -r skills/learning-coach ~/.claude/skills/learning-coach
 ```
 
 然后直接表达学习意图即可——"教我 X""帮我搞懂 Y""我老是忘记 Z""继续上次的"。
