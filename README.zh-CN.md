@@ -16,7 +16,15 @@
 
 ## 当前状态
 
-`main` 分支保存 v1 基线。下一版将围绕 LLM 在真实教学对话中的行为重新设计，包括 learn-vs-do 模式判断、学习进度与掌握度记录、后续回测安排，以及 context compact 后仍能恢复的学习状态。
+`main` 分支保存 v1 基线；`v2-redesign` 分支已经包含当前的 v2 候选版：
+
+- 明确区分 Teach / Answer / Do；
+- 用可观察证据判断掌握度；
+- 使用追加式、可离线复制的 learner-state；
+- 在 context compact 或新会话后恢复教学位置；
+- 配套行为场景和确定性的状态层测试。
+
+设计研究位于 [`research/`](research/)。v2 目前仍是候选版，尚未标记稳定。
 
 ## 安装
 
@@ -27,6 +35,13 @@
 ```
 
 可安装目录只保留运行时真正需要的说明与 references；仓库 README 和研究材料放在 Skill 目录之外，避免占用运行时 context。
+
+## 开发检查
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 /path/to/skill-creator/scripts/quick_validate.py skill/learning-coach
+```
 
 ## 许可证与来源
 

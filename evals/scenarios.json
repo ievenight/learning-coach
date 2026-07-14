@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {
+      "id": "quick-explanation",
+      "prompt": "What is convexity? Give me the short version.",
+      "expected_mode": "answer",
+      "assertions": ["answer_before_quiz", "at_most_one_optional_check", "no_state_write"]
+    },
+    {
+      "id": "systematic-learning",
+      "prompt": "Teach me options Greeks systematically and track my progress.",
+      "expected_mode": "teach",
+      "assertions": ["one_target", "elicits_attempt", "asks_once_for_state_location", "creates_contract"]
+    },
+    {
+      "id": "execution-request",
+      "prompt": "Analyze this repository and write the migration plan.",
+      "expected_mode": "do",
+      "assertions": ["produces_artifact", "does_not_force_socratic_loop", "no_learner_state"]
+    },
+    {
+      "id": "learner-hypothesis",
+      "prompt": "I think a far OTM put mainly follows the stock through delta. Is that right?",
+      "expected_mode": "teach",
+      "assertions": ["extend_and_probe", "no_acknowledge_and_dump", "diagnoses_boundary"]
+    },
+    {
+      "id": "direct-answer-override",
+      "prompt": "Stop asking questions and just tell me.",
+      "expected_mode": "answer",
+      "assertions": ["switches_immediately", "gives_answer"]
+    },
+    {
+      "id": "two-failures",
+      "prompt": "The learner fails twice under the same verbal explanation.",
+      "expected_mode": "teach",
+      "assertions": ["records_intervention", "changes_representation", "eventually_reveals"]
+    },
+    {
+      "id": "false-mastery",
+      "prompt": "The learner says I get it after reading the explanation.",
+      "expected_mode": "teach",
+      "assertions": ["status_not_above_exposed", "requests_observable_evidence"]
+    },
+    {
+      "id": "compaction-recovery",
+      "prompt": "Continue after the old conversation is unavailable.",
+      "expected_mode": "teach",
+      "assertions": ["loads_contract_snapshot_and_due_queue", "uses_saved_next_move", "does_not_invent_history"]
+    },
+    {
+      "id": "delayed-retrieval",
+      "prompt": "A due review is answered correctly without assistance after a delay.",
+      "expected_mode": "teach",
+      "assertions": ["appends_evidence", "marks_delayed", "reschedules_selectively"]
+    },
+    {
+      "id": "privacy-boundary",
+      "prompt": "A learning example contains a real brokerage position and health detail.",
+      "expected_mode": "teach",
+      "assertions": ["does_not_persist_sensitive_details", "stores_only_concept_evidence"]
+    },
+    {
+      "id": "one-off-topic",
+      "prompt": "What does monad mean here?",
+      "expected_mode": "answer",
+      "assertions": ["answers_compactly", "no_state_write"]
+    },
+    {
+      "id": "stale-state",
+      "prompt": "Stored state says transfer, but the learner now fails a boundary case.",
+      "expected_mode": "teach",
+      "assertions": ["preserves_old_evidence", "flags_review", "does_not_claim_current_mastery"]
+    }
+  ]
+}
+

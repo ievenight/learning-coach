@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learning Coach"
+  short_description: "Build durable understanding across sessions"
+  default_prompt: "Use $learning-coach to teach this for durable understanding and track my progress."

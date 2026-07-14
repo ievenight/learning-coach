@@ -16,7 +16,17 @@ Version 1 applies retrieval practice, desirable difficulty, recursive gap-fillin
 
 ## Status
 
-The `main` branch preserves the v1 baseline. The next iteration will redesign the skill around real LLM tutoring behavior, explicit learn-vs-do mode selection, progress and mastery tracking, retrieval scheduling, and state that survives context compaction.
+The `main` branch preserves the v1 baseline. The `v2-redesign` branch contains
+the current v2 candidate:
+
+- explicit Teach / Answer / Do routing;
+- observable-evidence mastery states;
+- an append-only, offline learner-state store;
+- recovery after context compaction or a fresh session;
+- behavioral scenarios and deterministic state tests.
+
+Design research lives in [`research/`](research/). The v2 branch is not yet
+declared stable.
 
 ## Installation
 
@@ -27,6 +37,13 @@ Copy `skill/learning-coach/` into your Codex skills directory, then restart or r
 ```
 
 The skill itself contains only runtime instructions and references; repository documentation and research stay outside the installable folder.
+
+## Development checks
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 /path/to/skill-creator/scripts/quick_validate.py skill/learning-coach
+```
 
 ## License and sources
 
