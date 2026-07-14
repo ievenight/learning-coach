@@ -1,0 +1,98 @@
+{
+  "skill_name": "learning-coach",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Teach me how an option's delta works.",
+      "expected_output": "Coaches rather than lectures: elicits an attempt or a prediction before giving a full explanation, and says up front that it will quiz/retrieve.",
+      "expectations": [
+        "The response asks the learner to attempt, predict, or recall something before delivering a complete explanation",
+        "The response does NOT open with a multi-paragraph lecture that explains delta in full before any interaction",
+        "The response stops and waits for the learner rather than answering its own question"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I keep forgetting how git rebase works.",
+      "expected_output": "Treats implicit learning intent as a teaching request: engages retrieval/coaching rather than a one-shot explanation, and offers to track it.",
+      "expectations": [
+        "The response engages a coaching/retrieval approach rather than only dumping an explanation",
+        "The response offers to help it stick / track progress over time, or asks a diagnosing question about what they already know"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "What's the capital of Australia?",
+      "expected_output": "Answers the factual lookup directly (Canberra) without turning it into a quiz or a learning loop.",
+      "expectations": [
+        "The response states the answer (Canberra) directly",
+        "The response does NOT force a quiz, elicitation, or learning-track offer onto this one-off lookup"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write me a regular expression that matches a US phone number.",
+      "expected_output": "Performs the execution task and produces the regex; does not obstruct with Socratic questioning.",
+      "expectations": [
+        "The response produces a usable regular expression",
+        "The response does NOT withhold the answer to quiz the user first"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "We were working through recursion and you were quizzing me, but stop quizzing me and just tell me the answer to the last one.",
+      "expected_output": "Honors the explicit override immediately and gives the answer, switching out of quiz mode.",
+      "expectations": [
+        "The response gives the direct answer",
+        "The response does NOT insist on another question or continue quizzing after the explicit 'just tell me'"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Okay, I think I get how recursion works now.",
+      "expected_output": "Does not accept the felt sense of understanding as mastery; converts it into an unaided retrieval or a demonstration.",
+      "expectations": [
+        "The response asks the learner to demonstrate, recall unaided, or apply recursion rather than accepting 'I get it' as proof",
+        "The response does not simply congratulate them and move on"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "The delta of a call option is always 1, right?",
+      "expected_output": "Corrects the misconception at the boundary: names what's right and what's wrong and gives the accurate version, without either flatly affirming or only saying 'no'.",
+      "expectations": [
+        "The response corrects the claim (a call delta ranges roughly 0 to 1, not always 1)",
+        "The response identifies the specific boundary/gap rather than just affirming or just negating",
+        "The response does not sycophantically agree with the incorrect statement"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "I want to really learn statistics over the next couple of months and keep track of where I am.",
+      "expected_output": "Recognizes a multi-session track: establishes a goal and offers/creates a durable per-topic note (asking once), rather than just starting to lecture.",
+      "expectations": [
+        "The response establishes or asks about the goal and current level",
+        "The response proposes keeping a durable progress note/track (asking permission once) rather than treating it as a one-off"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Teach me to solve a quadratic by completing the square.",
+      "expected_output": "For a procedure, shows a worked example and then fades steps for the learner to complete, prompting 'why does this step work' with feedback — not a passive walkthrough.",
+      "expectations": [
+        "The response has the learner actively complete or attempt steps rather than only reading a full worked solution",
+        "The response prompts the learner to explain why a step works, or checks their reasoning, at least once"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "I want to learn quantitative trading.",
+      "expected_output": "For a big open-ended track, aligns before diving in: asks a few intake questions (specifics, goal, level, time) and proposes a sequenced map to confirm — rather than immediately launching a hard lesson.",
+      "expectations": [
+        "The response asks a small number of intake/alignment questions (what specifically, what they want to be able to do, current level, or time) before teaching content",
+        "The response proposes a rough sequenced plan/roadmap (milestones) and invites the learner to confirm or adjust it",
+        "The response does NOT immediately dive into a hard concept question as if the goal and level were already settled"
+      ]
+    }
+  ]
+}
