@@ -137,6 +137,12 @@ fuzzy exactly where their understanding is thin (a precise gap-finder).
 
 - Prompt: "Explain X to me like I've never heard of it. I'll stop you wherever it
   gets vague — those are the gaps."
+- **Play the naive-but-sharp friend, don't just listen.** Interrupt with the
+  questions a smart beginner would actually ask — "why should it be *defined* that
+  way?", "what would go wrong without it?", "isn't that just <simpler thing>?" —
+  the design-level questions (§8, rungs 5-6) that expose understanding which can
+  recite and apply but can't justify. Better they hit that wall here than in front
+  of a real audience.
 - When their explanation stalls or hand-waves, *that spot* is the next thing to
   learn. Send them back to it, then have them re-explain.
 - For self-teaching with an LLM, the same loop works: understand → explain your
@@ -181,6 +187,20 @@ A: ~order 10^14 — uses ~330 g/mol per nucleotide → mass per RNA → Avogadro
   "derive…", "when would you use A vs B?" These demand recall and reasoning.
 - Include the **load-bearing conceptual questions**, not only recall trivia — the
   ones that reveal whether the mental model is right.
+- **Climb the depth ladder** — most question sets die on the first two rungs:
+  1. *Recall* — "what is delta?"
+  2. *Application* — "spot 100, strike 105, a week left: rough delta, and why?"
+  3. *Discrimination* — "when does gamma matter more than delta?"
+  4. *Mechanism* — "why does delta drift toward 1 as you go deep in-the-money?"
+  5. *Design* — "why is delta **defined** as sensitivity to spot at all? What
+     problem does that definition solve, and what would a different choice lose?"
+  6. *Attack* — "construct a case where delta-hedging fails badly."
+  Rungs 1-2 prove the words are in memory; rungs 5-6 are what a smart beginner
+  asks and what recitation can't survive. For every load-bearing concept, write at
+  least one rung-5/6 question. Generic design moves that work on any concept:
+  *Why this definition and not the nearby alternative? What problem was this
+  invented to solve — what did people do before it? What breaks if we drop the
+  assumption? Isn't this just <neighboring concept> in disguise?*
 - Mix difficulty; include at least one that pushes past comfortable.
 - For multiple-choice (when format requires it), write distractors that punish a
   shallow read — plausible-looking answers that only deeper understanding rules

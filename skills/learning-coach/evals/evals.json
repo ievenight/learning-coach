@@ -123,6 +123,15 @@
         "The response does NOT leave the [x]/✓unaided marking intact after the failed re-test",
         "The response treats the miss as useful information and re-teaches only the located gap, not the whole topic"
       ]
+    },
+    {
+      "id": 14,
+      "prompt": "(In an ongoing options session, the learner has just correctly stated what delta is AND correctly used it in a fresh pricing scenario, cold, twice.) Learner: \"Got that one too. What's next?\"",
+      "expected_output": "Escalates up the question-depth ladder instead of another recall/application rep: asks a design- or attack-level question (why is delta defined this way / what problem does the definition solve / construct a case where delta-hedging fails), then stops and waits.",
+      "expectations": [
+        "The response asks a deeper question about the SAME concept — justification/design (why defined this way, what the definition buys) or attack (a case where it breaks) — rather than another restate/apply rep or moving on without any deeper check",
+        "The response does NOT answer its own question; it stops and waits for the learner's attempt"
+      ]
     }
   ]
 }
