@@ -49,11 +49,21 @@ Then just express a learning intent — "teach me X", "help me get my head aroun
 
 ## How memory works
 
-For a multi-session track the coach keeps a note at `.learning-coach/<topic>.md`,
-relative to your working directory — a plain, fixed-format Markdown file
-(`Map` / `Focus` / `Next`) that **you own**: read it, edit it, reorder it, or delete
-it, and the coach follows your edits. It never stores raw conversation or sensitive
-personal data.
+For a multi-session track the coach keeps plain Markdown files under
+`.learning-coach/`, relative to your working directory:
+
+- `<topic>.md` — the progress note (`Next` / `Focus` / `Map`), injected at the start
+  of every session;
+- `<topic>/ledger.md` — a one-line-per-attempt log of your retrieval attempts (the
+  coach's gradebook: it's how recurring error patterns and over-confidence get
+  caught across sessions);
+- `<topic>/plan.md` — the prepared next lesson, written at wrap-up like a teacher
+  grading homework the night before class: cold-open questions, checkpoints with
+  predicted wrong answers, a backup explanation, and a cut line.
+
+All of it is **yours**: read, edit, reorder, or delete any file and the coach follows
+your edits. It never stores raw conversation or sensitive personal data — answers are
+distilled, and questions built from your own work log only the outcome.
 
 ## License
 
@@ -94,7 +104,13 @@ cp -r skills/learning-coach ~/.claude/skills/learning-coach
 
 ## 记忆怎么工作
 
-多会话学习时，教练会在你的工作目录下维护 `.learning-coach/<主题>.md`——一份格式固定的纯 Markdown 文件（`Map` / `Focus` / `Next`），**归你所有**：可以查看、编辑、重排或删除，教练会遵从你的改动。它从不保存对话原文或敏感个人信息。
+多会话学习时，教练在你的工作目录下的 `.learning-coach/` 里维护纯 Markdown 文件：
+
+- `<主题>.md` — 进度笔记（`Next` / `Focus` / `Map`），每次会话开始时自动注入；
+- `<主题>/ledger.md` — 每次答题一行的批改簿（跨会话的错误模式和「高信心答错」就是从这里被发现的）；
+- `<主题>/plan.md` — 备好的下一课教案，会话收尾时像老师晚上批作业备课一样写出：开场冷抽查、带预判错法的检查点、备用讲法、时间不够先砍谁。
+
+这些文件**归你所有**：查看、编辑、重排或删除任何一份，教练都遵从你的改动。它从不保存对话原文或敏感个人信息——答案只存要点，基于你真实工作出的题只记结果不记内容。
 
 ## 许可
 

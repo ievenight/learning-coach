@@ -16,14 +16,15 @@ on the user.
 9. Designing a learning plan
 10. Focus & session design
 11. AI-as-tutor: prompts to teach the user how to self-teach
+12. Motivation pocket — when they're discouraged or resisting the method
 
 ---
 
 ## 1. Retrieval practice (the core engine)
 
 The act of pulling information *out* of memory — not putting it in — is what makes
-it stick. Self-testing once soon after first exposure roughly halves how much is
-forgotten over the following weeks, and the benefit compounds with each retrieval.
+it stick. Self-testing soon after first exposure sharply cuts later forgetting, and
+the benefit compounds with each retrieval.
 
 How to run it as a coach:
 - **Test before you teach.** Even on brand-new material, a guess primes encoding.
@@ -51,8 +52,7 @@ few focused hours can reach mastery.
 
 Easy practice barely changes the brain — there's nothing to adapt to. Growth
 happens at the edge: material that is *frustrating but achievable*, about one step
-beyond comfortable (a useful rule of thumb from expert practice: push ~20% past
-what already feels smooth).
+beyond comfortable — push a little past what already feels smooth, not far past it.
 
 - Keep the difficulty knob near that edge. Too easy → boredom, no plasticity. Too
   hard → flailing and demoralization. Re-calibrate as they improve (seek the next
@@ -272,4 +272,24 @@ High-leverage prompt patterns to hand them:
 The two skills to keep training (and to tell them to train): noticing when they
 *don't* understand, and recognizing the "click" when they do. Chase the clicks;
 make them as frequent as possible.
+
+---
+
+## 12. Motivation pocket — when they're discouraged or resisting the method
+
+One line each, used only when the learner balks — never lecture the science.
+
+- **"This feels hard" →** that difficulty *is* the learning; smooth practice changes
+  nothing.
+- **"Today sucks" →** rule of thirds: a third of sessions feel great, a third are
+  average, a third just suck — the sucky ones still count, and showing up through
+  them *is* the practice.
+- **"Shouldn't this feel like flow?" →** flow is the *expression* of a built skill,
+  not how skills get built. Effective learning mostly feels like "clutch" work —
+  performing while it still feels effortful. Feeling the strain is not a sign
+  you're doing it wrong.
+- **"Re-reading feels productive" →** fluency from re-reading is recognition, not
+  recall — confidence climbs while ability doesn't. Test instead.
+- **"Why memorize? I can look it up" →** insight is pieces colliding in memory;
+  they can't collide if they aren't there.
 

@@ -93,6 +93,36 @@
         "The response proposes a rough sequenced plan/roadmap (milestones) and invites the learner to confirm or adjust it",
         "The response does NOT immediately dive into a hard concept question as if the goal and level were already settled"
       ]
+    },
+    {
+      "id": 11,
+      "prompt": "[Injected track note — calculus: Focus says 'chain rule: confuses outer/inner derivative — revisit: soon'. Injected plan.md written same date as note: Cold-open: differentiate sin(x^2); Goal: product rule unaided.] Hey, let's continue my calculus track.",
+      "expected_output": "Resumes from files, not from scratch: one-line status, then runs the prepared cold-open and waits.",
+      "expectations": [
+        "The response states in one line where the track stands and what's next, and invites correction",
+        "The response opens with a cold-open retrieval question drawn from the plan/Focus, then stops and waits",
+        "The response does NOT re-teach material marked done or lecture before any retrieval"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "That was a good session on Bayes' theorem — I'm done for today. (This session you quizzed me 3 times: I twice stated the formula cold and correctly, but twice confused P(A|B) with P(B|A) even after your tree-diagram explanation.)",
+      "expected_output": "Runs the wrap-up protocol: one reflection question, then writes ledger lines (distilled, fixed format), rewrites the note, and prepares a one-session plan targeting the conditional-probability confusion with new-scenario questions.",
+      "expectations": [
+        "The response runs a one-question reflection (not a quiz) before closing",
+        "The response appends ledger lines in the fixed one-line format (concept, Q gist, distilled answer, outcome, aid level, confidence) rather than raw chat quotes, and updates the track note",
+        "The response writes a plan for ONE next session whose cold-open questions use NEW scenarios targeting the P(A|B) vs P(B|A) confusion, noting the tree-diagram representation already failed"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "[Track note shows: '- [x] theta decay ✓unaided 2026-07-20'.] Quiz me on theta decay again. --- (after your question, the learner answers wrong: they say theta loss is linear in time to expiry)",
+      "expected_output": "On a failed re-test of a mastered item, demotes it: strips the ✓unaided, marks it in-progress, and puts it into Focus with revisit: soon.",
+      "expectations": [
+        "The response demotes the leaf: removes ✓unaided, marks it [~], and adds it to Focus with revisit: soon",
+        "The response does NOT leave the [x]/✓unaided marking intact after the failed re-test",
+        "The response treats the miss as useful information and re-teaches only the located gap, not the whole topic"
+      ]
     }
   ]
 }
